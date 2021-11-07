@@ -14,12 +14,12 @@ UART1_Init(9600);
 
 while(1){
 ptr=ADC_Read(1);
-if (ptr < 140)
+if (ptr < 100)
 {
 PORTB=0b11110000;
 Delay_ms(2000);
 UART1_Write(ptr);
-UART1_Write_Text("your ptr Reading is less than 140");
+UART1_Write_Text("your ptr Reading is less than 100");
 UART1_Write(13);
 UART1_Write(10);
 
